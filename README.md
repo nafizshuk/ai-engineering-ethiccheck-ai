@@ -84,14 +84,10 @@ The completed group files must later be added as `docs/week1_observation_sheet.m
 
 | Week | Focus | Deliverable | Status |
 | --- | --- | --- | --- |
-| W1 | Individual project framing and public-source review | README and ten-field project scope | Prepared; preliminary scope for student review |
-| W1 | Initial project organisation | Required folders with `.gitkeep` placeholders | Prepared locally |
-| W1 | Part A group observations | `docs/week1_observation_sheet.md` | Pending actual completed group file |
-| W1 | Part B group system map | `docs/week1_system_map.png` | Pending actual completed group file |
-| W1 | Publish and verify individual repository | GitHub commits and lecturer-accessible URL | Pending publication and verification |
-| W1 | Course portal submission | Repository URL submitted through Moodle | Pending student submission |
+| Week 1 | Project scoping and GitHub setup | Project scope, README, and initial repository structure | Completed |
+| Week 2 | Requirements and project refinement | Refined scope, system requirements, and evaluation criteria | Not started |
 
-**Week 1 is not yet fully complete.** After publishing, verify the file list and commit, check lecturer access, and update this table. Add the actual group files when available, then submit the exact GitHub repository URL through Moodle.
+Add one new row for each subsequent week. Group observation and system-map files are tracked separately in the [group-file status note](docs/week1_group_files_pending.md).
 
 ## Current Usage
 
