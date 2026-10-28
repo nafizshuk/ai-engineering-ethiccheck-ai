@@ -4,7 +4,7 @@
 
 > A proposed educational assistant that helps students identify possible ethical concerns and missing evidence in AI project reports, with understandable explanations linked to public guidance.
 
-**Individual AI Engineering semester project - Week 1 scoping stage.** The application has not yet been implemented. The README and project scope are prepared; the Part A observation sheet and Part B system map are pending. GitHub publication and lecturer access still need verification.
+**Individual AI Engineering semester project - Week 2 planning stage.** Requirements, evaluation criteria, and a conceptual V1 architecture are documented. The application has not yet been implemented or tested. Week 1 group files remain tracked separately in the pending-files note.
 
 ## Problem Statement
 
@@ -60,7 +60,17 @@ Planned outcomes are **evidence documented**, **potential concern**, **insuffici
 
 Key risks are unsupported findings, overreliance, upload privacy, unequal feedback across writing styles, prompt injection, and conflicting guidance. Planned controls include source validation, explicit uncertainty, minimal retention, human review, and adversarial testing. These controls are proposed and have not yet been implemented.
 
-Initial evaluation will use approximately 20 held-out synthetic or permitted anonymised cases, with reviewer-checked reference annotations where feasible. Measures include precision/recall for concerns, citation support, abstention on missing evidence, and median/95th-percentile latency. Numerical targets will be set in Topic 2; no results are available yet. See the [complete project scope](docs/week1_project_scope.md) for details and limitations.
+Initial evaluation will use approximately 20 held-out synthetic or permitted anonymised cases, with reviewer-checked reference annotations where feasible. Measures include precision/recall for concerns, citation support, abstention on missing evidence, and median/95th-percentile latency. Proposed numerical targets and test protocols are now specified in the [Week 2 evaluation criteria](docs/week2_evaluation_criteria.md); no results are available yet. See the [complete project scope](docs/week1_project_scope.md) for details and limitations.
+
+## Week 2 Planning Deliverables
+
+- [Requirements specification](docs/week2_requirements.md): refined framing and scope, 7 functional requirements, 5 non-functional requirements, and 6 Responsible AI requirements.
+- [Evaluation criteria](docs/week2_evaluation_criteria.md): linked metrics, proposed thresholds, planned test sets, scoring rules, and expected user outcomes.
+- [V1 architecture diagram](docs/week2_architecture_v1.png): conceptual components and information flows.
+- [Architecture decisions and traceability](docs/week2_architecture_decisions.md): requirement-driven design, five decisions, trade-offs, and links to future evidence.
+- [Editable Draw.io source](docs/week2_architecture_v1.drawio): open in Draw.io to revise the diagram.
+
+The Week 2 thresholds are design targets. No prototype performance, privacy guarantee, user study, or test result is claimed.
 
 ## Repository Structure
 
@@ -70,24 +80,30 @@ ai-engineering-ethiccheck-ai/
 |-- .gitignore
 |-- docs/
 |   |-- week1_project_scope.md
-|   `-- week1_group_files_pending.md
-|-- data/.gitkeep
-|-- src/.gitkeep
-|-- notebooks/.gitkeep
-|-- evaluation/.gitkeep
-`-- prompts/.gitkeep
+|   |-- week1_group_files_pending.md
+|   |-- week2_requirements.md
+|   |-- week2_evaluation_criteria.md
+|   |-- week2_architecture_v1.png
+|   |-- week2_architecture_v1.drawio
+|   `-- week2_architecture_decisions.md
+|-- data/
+|-- src/
+|-- notebooks/
+|-- evaluation/
+`-- prompts/
 ```
 
-The completed group files must later be added as `docs/week1_observation_sheet.md` and `docs/week1_system_map.png`. They are absent until the actual group work is supplied. The [pending-files note](docs/week1_group_files_pending.md) records the outstanding requirements.
+The five development folders can contain README or `.gitkeep` placeholders. The actual group files must later be added as `docs/week1_observation_sheet.md` and `docs/week1_system_map.png`. Their status is recorded in the [pending-files note](docs/week1_group_files_pending.md).
 
 ## Weekly Progress
 
 | Week | Focus | Deliverable | Status |
 | --- | --- | --- | --- |
 | Week 1 | Project scoping and GitHub setup | Project scope, README, and initial repository structure | Completed |
-| Week 2 | Requirements and project refinement | Refined scope, system requirements, and evaluation criteria | Not started |
+| Week 2 | Requirements, evaluation planning, and V1 architecture | Requirements specification, evaluation criteria, architecture diagram, decisions, and traceability | Prepared - ready for review and upload |
+| Week 3 | Data preparation | To be defined using the Topic 3 Lab | Not started |
 
-Add one new row for each subsequent week. Group observation and system-map files are tracked separately in the [group-file status note](docs/week1_group_files_pending.md).
+Keep one row per week. Mark Week 2 completed after reviewing and committing its deliverables to GitHub. Group observation and system-map files are tracked separately in the [group-file status note](docs/week1_group_files_pending.md).
 
 ## Current Usage
 
