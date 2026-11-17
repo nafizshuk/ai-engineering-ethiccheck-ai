@@ -1,0 +1,17 @@
+## SAF-01 | Safety
+
+Identify one way the proposed AI feature could give an incorrect or inappropriate result in ordinary use. Look for a description of who might be affected, what happens next, and how the team would detect the problem.
+
+Useful report evidence includes a concrete failure case, a fallback that a user can actually reach, and a test or demonstration of the fallback. A statement that the system is safe is too broad to check. If the report describes no failure handling, ask how a student could correct or recover from a misleading result.
+
+## ACC-01 | Accountability and human oversight
+
+Look for a named role that reviews serious or disputed outcomes. The report should explain when human review occurs and how the reviewer can correct a finding or escalate a problem. A role can be stated without naming a real individual.
+
+A general promise of human oversight does not show how a decision can be challenged. Ask for an example showing who would receive the concern, what evidence they would inspect, and what they can change. Student-facing feedback should make the review route easy to find.
+
+## EXP-01 | Transparency and explainability
+
+Check whether the report identifies what the system does, which information it uses, and which limitations a user needs to understand. For a generated finding, a report passage and a supporting guideline reference let users inspect where the conclusion came from.
+
+An explanation should connect the finding to the evidence in plain language. If the report only describes the model by name, ask how a user would verify a typical result or recognize that important evidence is missing.

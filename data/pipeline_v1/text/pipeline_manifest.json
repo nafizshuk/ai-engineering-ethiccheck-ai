@@ -1,0 +1,132 @@
+{
+  "pathway": "A - TXT",
+  "created_utc": "2026-11-17T14:22:45+00:00",
+  "python": "3.12.14",
+  "workflow": "batch ETL",
+  "processing": {
+    "method": "heading-and-paragraph-aware, word fallback, no overlap",
+    "maximum_characters": 520,
+    "overlap": 0
+  },
+  "sources": {
+    "data_and_fairness.txt": {
+      "bytes": 1170,
+      "sha256": "1b4a900c3e22f3c751d97a96a50aad9e7a4b6c903559d6c95cd5e6d2243d16e0"
+    },
+    "risk_and_oversight.txt": {
+      "bytes": 1644,
+      "sha256": "759c3d4492c46b4caaab8724f90799400bb697016ebc07e3feda39ea3e03ce25"
+    }
+  },
+  "validation": {
+    "file": "data/pipeline_v1/text/prepared_text.jsonl",
+    "bytes": 7549,
+    "sha256": "960ea4ccb1a529328242101f4228d7b765303981c1b5030b2dddaed83967123c",
+    "records": 8
+  },
+  "comparison_metrics": {
+    "PRI-01": {
+      "records": 2,
+      "word_splits": 0,
+      "within_paragraph_cuts": 0
+    },
+    "FAI-01": {
+      "records": 2,
+      "word_splits": 0,
+      "within_paragraph_cuts": 0
+    },
+    "SAF-01": {
+      "records": 2,
+      "word_splits": 0,
+      "within_paragraph_cuts": 0
+    },
+    "ACC-01": {
+      "records": 1,
+      "word_splits": 0,
+      "within_paragraph_cuts": 0
+    },
+    "EXP-01": {
+      "records": 1,
+      "word_splits": 0,
+      "within_paragraph_cuts": 0
+    }
+  },
+  "records": [
+    {
+      "source_id": "S01",
+      "title": "Data and fairness",
+      "criteria": [
+        "PRI-01",
+        "FAI-01"
+      ],
+      "filename": "data_and_fairness.txt",
+      "physical_lines": 11,
+      "bom": false,
+      "characters": 1170,
+      "paragraph_count": 4,
+      "bytes": 1170,
+      "sha256": "1b4a900c3e22f3c751d97a96a50aad9e7a4b6c903559d6c95cd5e6d2243d16e0",
+      "source_path": "data/sources/data_and_fairness.txt",
+      "source_version": "1.0",
+      "owner": "EthicCheck AI project",
+      "access_rights": "Original EthicCheck course material written for this repo. NIST references are attributed and linked.",
+      "reference_title": "NIST AI RMF 1.0",
+      "reference_url": "https://doi.org/10.6028/NIST.AI.100-1",
+      "reference_sections": {
+        "PRI-01": "3.6",
+        "FAI-01": "3.7"
+      },
+      "prepared_output": "data/pipeline_v1/text/prepared_text.jsonl",
+      "prepared_sha256": "960ea4ccb1a529328242101f4228d7b765303981c1b5030b2dddaed83967123c",
+      "prepared_bytes": 7549,
+      "record_count": 4,
+      "processing_note": "heading-and-paragraph-aware, word fallback, no overlap, 520 characters per chunk, physical TXT line ranges"
+    },
+    {
+      "source_id": "S02",
+      "title": "Risk and oversight",
+      "criteria": [
+        "SAF-01",
+        "ACC-01",
+        "EXP-01"
+      ],
+      "filename": "risk_and_oversight.txt",
+      "physical_lines": 17,
+      "bom": false,
+      "characters": 1644,
+      "paragraph_count": 6,
+      "bytes": 1644,
+      "sha256": "759c3d4492c46b4caaab8724f90799400bb697016ebc07e3feda39ea3e03ce25",
+      "source_path": "data/sources/risk_and_oversight.txt",
+      "source_version": "1.0",
+      "owner": "EthicCheck AI project",
+      "access_rights": "Original EthicCheck course material written for this repo. NIST references are attributed and linked.",
+      "reference_title": "NIST AI RMF 1.0",
+      "reference_url": "https://doi.org/10.6028/NIST.AI.100-1",
+      "reference_sections": {
+        "SAF-01": "3.2",
+        "ACC-01": "3.4",
+        "EXP-01": "3.5"
+      },
+      "prepared_output": "data/pipeline_v1/text/prepared_text.jsonl",
+      "prepared_sha256": "960ea4ccb1a529328242101f4228d7b765303981c1b5030b2dddaed83967123c",
+      "prepared_bytes": 7549,
+      "record_count": 4,
+      "processing_note": "heading-and-paragraph-aware, word fallback, no overlap, 520 characters per chunk, physical TXT line ranges"
+    }
+  ],
+  "notes": "Application-authored guides link to NIST sections. TXT line locations are not NIST page numbers.",
+  "repeatability": {
+    "status": "PASS",
+    "runs": 2,
+    "matched_fields": [
+      "processing",
+      "sources",
+      "validation",
+      "comparison_metrics",
+      "records"
+    ],
+    "rerun_finished_utc": "2026-11-17T14:22:45+00:00",
+    "part_b_output_equal": true
+  }
+}

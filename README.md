@@ -4,7 +4,7 @@
 
 > A proposed educational assistant that helps students identify possible ethical concerns and missing evidence in AI project reports, with understandable explanations linked to public guidance.
 
-**Individual AI Engineering semester project - Week 2 planning stage.** Requirements, evaluation criteria, and a conceptual V1 architecture are documented. The application has not yet been implemented or tested. Week 1 group files remain tracked separately in the pending-files note.
+**Individual AI Engineering semester project - Week 3 data engineering.** The reference text preparation pipeline has been executed and checked. The report assessment application remains at the design stage.
 
 ## Problem Statement
 
@@ -48,7 +48,7 @@ The primary users are undergraduate AI and computing students preparing project 
 2. **NIST (2023), Artificial Intelligence Risk Management Framework (AI RMF 1.0):** [publication and document download](https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10).
 3. **Microsoft (2022), Responsible AI Impact Assessment Template:** [public PDF](https://blogs.microsoft.com/wp-content/uploads/prod/sites/5/2022/06/Microsoft-RAI-Impact-Assessment-Template.pdf).
 
-These documents are proposed reference material, not labelled training data or binding university policy. Only links are included here. Reference PDFs, the Lab manual, private reports, and credentials must remain outside the repository. Evaluation will start with original synthetic examples; any real reports require permission and anonymisation.
+These documents are proposed reference material, not labelled training data or binding university policy. Publisher references are linked here. The Week 3 corpus consists of original EthicCheck text guides linked to NIST sections. Reference PDFs, the Lab manual, private reports, and credentials must remain outside the repository. Evaluation will start with original synthetic examples; any real reports require permission and anonymisation.
 
 ## Proposed Behaviour and Boundaries
 
@@ -72,6 +72,15 @@ Initial evaluation will use approximately 20 held-out synthetic or permitted ano
 
 The Week 2 thresholds are design targets. No prototype performance, privacy guarantee, user study, or test result is claimed.
 
+## Week 3 Data Pipeline
+
+The PDF/text pathway uses two original UTF-8 guides covering five ethics categories. The paragraph-aware method produced 8 source-linked records with zero within-paragraph cuts on the sample. The two batch runs produced the same JSONL and source-to-output mappings.
+
+- [Notebook](notebooks/week3_pipeline.ipynb) · [Open in Colab](https://colab.research.google.com/github/nafizshuk/ai-engineering-ethiccheck-ai/blob/main/notebooks/week3_pipeline.ipynb)
+- [Data inventory](docs/week3_data_inventory.md) · [Pipeline diagram](docs/week3_pipeline_diagram.png) · [Decisions](docs/week3_pipeline_decisions.md)
+- [Part B export](data/processed/prepared_text.jsonl) · [Preparation lineage](data/week3_manifest.json)
+- [Part C export](data/pipeline_v1/text/prepared_text.jsonl) · [Run manifest](data/pipeline_v1/text/pipeline_manifest.json)
+
 ## Repository Structure
 
 ```text
@@ -80,31 +89,29 @@ ai-engineering-ethiccheck-ai/
 |-- .gitignore
 |-- docs/
 |   |-- week1_project_scope.md
-|   |-- week1_group_files_pending.md
+|   |-- week1_observation_sheet.md
+|   |-- week1_system_map (1).png
 |   |-- week2_requirements.md
 |   |-- week2_evaluation_criteria.md
 |   |-- week2_architecture_v1.png
 |   |-- week2_architecture_v1.drawio
-|   `-- week2_architecture_decisions.md
-|-- data/
+|   |-- week2_architecture_decisions.md
+|   `-- week3_*.md, .png, .drawio
+|-- data/ (Week 3 source files, exports and manifests)
 |-- src/
-|-- notebooks/
+|-- notebooks/week3_pipeline.ipynb
 |-- evaluation/
 `-- prompts/
 ```
-
-The five development folders can contain README or `.gitkeep` placeholders. The actual group files must later be added as `docs/week1_observation_sheet.md` and `docs/week1_system_map.png`. Their status is recorded in the [pending-files note](docs/week1_group_files_pending.md).
 
 ## Weekly Progress
 
 | Week | Focus | Deliverable | Status |
 | --- | --- | --- | --- |
 | Week 1 | Project scoping and GitHub setup | Project scope, README, and initial repository structure | Completed |
-| Week 2 | Requirements, evaluation planning, and V1 architecture | Requirements specification, evaluation criteria, architecture diagram, decisions, and traceability | Prepared - ready for review and upload |
-| Week 3 | Data preparation | To be defined using the Topic 3 Lab | Not started |
-
-Keep one row per week. Mark Week 2 completed after reviewing and committing its deliverables to GitHub. Group observation and system-map files are tracked separately in the [group-file status note](docs/week1_group_files_pending.md).
+| Week 2 | Requirements, evaluation planning, and V1 architecture | Requirements specification, evaluation criteria, architecture diagram, decisions, and traceability | Completed |
+| Week 3 | Data preparation and lineage | Executable notebook, prepared exports, manifests and workflow | Pipeline verified locally. Colab run pending. |
 
 ## Current Usage
 
-This repository currently contains project documentation only. There is no executable application, dependency installation, or demonstration to run. Read the [Week 1 project scope](docs/week1_project_scope.md) first. Implementation and setup instructions will be added as the project develops.
+Open the Week 3 notebook in Colab and choose **Runtime → Run all** to reproduce the exports. The notebook retrieves the two tracked inputs from GitHub if needed. Download the generated data ZIP from the Colab Files panel before the runtime ends. This step uses Python and requires no model API key.

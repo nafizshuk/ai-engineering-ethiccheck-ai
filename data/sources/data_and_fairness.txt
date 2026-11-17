@@ -1,0 +1,11 @@
+## PRI-01 | Privacy
+
+Find the report passages that describe what information enters the application, why it is needed, and who can access it. Inspect how long original input and derived records are retained, and whether third-party processing is described.
+
+Look for a concrete control such as collecting less information, removing identifiers before testing, or clearing temporary records at the end of a session. If the project makes a privacy claim without explaining the data flow, ask which data reaches each component and how the team checks that sensitive details stay out of logs.
+
+## FAI-01 | Fairness
+
+Check whether the report describes who could receive less useful or less accurate results. Look for an explanation of how the team chose the examples or user contexts it tested. Compare how errors would affect users in those contexts.
+
+Evidence might include outcome counts across relevant evaluation subsets or examples with equivalent meaning written in different styles. A fairness claim needs a stated comparison and its limitations. A small synthetic test can reveal a problem worth investigating, but it cannot establish performance across all users.
